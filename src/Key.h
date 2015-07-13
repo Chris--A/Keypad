@@ -32,12 +32,7 @@
 #ifndef KEY_H
 #define KEY_H
 
-// Arduino versioning.
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"	// for digitalRead, digitalWrite, etc
-#else
-#include "WProgram.h"
-#endif
+#include <Arduino.h>
 
 #define OPEN LOW
 #define CLOSED HIGH
