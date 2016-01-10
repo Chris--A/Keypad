@@ -29,8 +29,8 @@
 ||
 */
 
-#ifndef KEY_H
-#define KEY_H
+#ifndef Keypadlib_KEY_H_
+#define Keypadlib_KEY_H_
 
 #include <Arduino.h>
 
