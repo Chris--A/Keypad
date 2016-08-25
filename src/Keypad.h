@@ -76,6 +76,7 @@ class Keypad : public Key {
 public:
 
 	Keypad(char *userKeymap, byte *row, byte *col, byte numRows, byte numCols);
+	Keypad() {}
 
 	virtual void pin_mode(byte pinNum, byte mode) { pinMode(pinNum, mode); }
 	virtual void pin_write(byte pinNum, boolean level) { digitalWrite(pinNum, level); }
