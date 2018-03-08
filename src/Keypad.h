@@ -43,9 +43,10 @@
 #define pinMode(_pin, _mode) _mypinMode(_pin, _mode)
 #define _mypinMode(_pin, _mode)  \
 do {							 \
-	if(_mode == INPUT_PULLUP)	 \
+	if(_mode == INPUT_PULLUP) {	 \
 		pinMode(_pin, INPUT);	 \
 		digitalWrite(_pin, 1);	 \
+	}	 \
 	if(_mode != INPUT_PULLUP)	 \
 		pinMode(_pin, _mode);	 \
 }while(0)
