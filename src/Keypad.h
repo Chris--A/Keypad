@@ -67,7 +67,7 @@ typedef struct {
 } KeypadSize;
 
 #define LIST_MAX 10		// Max number of keys on the active list.
-#define MAPSIZE 10		// MAPSIZE is the number of rows (times 16 columns)
+#define MAPSIZE 12		// MAPSIZE is the number of rows (times 16 columns)
 #define makeKeymap(x) ((char*)x)
 
 
@@ -81,7 +81,7 @@ public:
 	virtual void pin_write(byte pinNum, boolean level) { digitalWrite(pinNum, level); }
 	virtual int  pin_read(byte pinNum) { return digitalRead(pinNum); }
 
-	uint bitMap[MAPSIZE];	// 10 row x 16 column array of bits. Except Due which has 32 columns.
+	uint bitMap[MAPSIZE];	// 12 row x 16 column array of bits. Except Due which has 32 columns.
 	Key key[LIST_MAX];
 	unsigned long holdTimer;
 
