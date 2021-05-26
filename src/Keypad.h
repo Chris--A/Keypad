@@ -81,7 +81,7 @@ public:
 	virtual void pin_write(byte pinNum, boolean level) { digitalWrite(pinNum, level); }
 	virtual int  pin_read(byte pinNum) { return digitalRead(pinNum); }
 
-	uint bitMap[MAPSIZE];	// 10 row x 16 column array of bits. Except Due which has 32 columns.
+	uint bitMap[MAPSIZE];	// 12 row x 16 column array of bits. Except Due which has 32 columns.
 	Key key[LIST_MAX];
 	unsigned long holdTimer;
 
