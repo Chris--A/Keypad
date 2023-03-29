@@ -154,18 +154,18 @@ void Keypad::nextKeyState(byte idx, boolean button) {
 
 	switch (key[idx].kstate) {
 		case IDLE:
-			if (button==CLOSED) {
+			if (button==KEYPAD_CLOSED) {
 				transitionTo (idx, PRESSED);
 				holdTimer = millis(); }		// Get ready for next HOLD state.
 			break;
 		case PRESSED:
 			if ((millis()-holdTimer)>holdTime)	// Waiting for a key HOLD...
 				transitionTo (idx, HOLD);
-			else if (button==OPEN)				// or for a key to be RELEASED.
+			else if (button==KEYPAD_OPEN)				// or for a key to be RELEASED.
 				transitionTo (idx, RELEASED);
 			break;
 		case HOLD:
-			if (button==OPEN)
+			if (button==KEYPAD_OPEN)
 				transitionTo (idx, RELEASED);
 			break;
 		case RELEASED:
