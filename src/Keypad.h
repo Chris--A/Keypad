@@ -52,8 +52,8 @@ do {							 \
 #endif
 
 
-#define OPEN LOW
-#define CLOSED HIGH
+#define KEYPAD_OPEN LOW    // Many libraries use this alias OPEN , and this cause issues
+#define KEYPAD_CLOSED HIGH  // Many libraries use this alias CLOSED , and this cause issues
 
 typedef char KeypadEvent;
 typedef unsigned int uint;
